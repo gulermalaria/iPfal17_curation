@@ -126,5 +126,25 @@ for met in new_model.metabolites:
     if met.name is None:
         missing_metabolite_names.append(met.id)
 
-print("\n%d metabolites do not have the name attribute" % len(missing_metabolite_names))
+print("\nStarting metabolites attributes curation.\n%d metabolites do not have the name attribute prior to curaton\n" % len(missing_metabolite_names))
+
+filename = "/home/mstolarczyk/PycharmProjects/uva/data/added_metabolites.csv"
+with open(filename, 'r') as handle:
+    file = list(csv.reader(handle))
+    for i in range(1, len(file)):
+        try:
+            new_model.metabolites.get_by_id(file[i][0])
+        except KeyError:
+            print('No metabolite with ID: %s. Attributes will not be added' % (file[i][0]))
+        else:
+            new_model.metabolites.get_by_id(file[i][0]).formula = file[i][2]
+            new_model.metabolites.get_by_id(file[i][0]).name = file[i][1]
+
+missing_metabolite_names = []
+for met in new_model.metabolites:
+    if met.name is None:
+        missing_metabolite_names.append(met.id)
+
+print("\n%d metabolites do not have the name attribute after curation\n" % len(missing_metabolite_names))
+
 
