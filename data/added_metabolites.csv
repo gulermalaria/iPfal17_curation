@@ -77,6 +77,8 @@ pa12032180_c,1_20:3_2_18:0_phosphatidate,C41H73O8P1
 pa12042180_c,1_20:4_2_18:0_phosphatidate,C41H71O8P1
 pa12032181_c,1_20:3_2_18:1_phosphatidate,C41H71O8P1
 pa12242181_c,1_22:4_2_18:1_phosphatidate,C43H71O8P1
+pa12252180_c,1_22:5_2_18:0_phosphatidate,C43H71O8P1
+pa12252181_c,1_22:5_2_18:1_phosphatidate,C43H69O8P1
 pa12262180_c,1_22:6_2_18:0_phosphatidate,C43H69O8P1
 cdp11602140g_c,1_16:0_2_14:0_CDP_glycerol,C38H75O15N3P2
 cdp11612140g_c,1_16:1_2_14:0_CDP_glycerol,C38H73O15N3P2
@@ -95,6 +97,8 @@ cdp12032180g_c,1_20:3_2_18:0_CDP_glycerol,C46H85O15N3P2
 cdp12042180g_c,1_20:4_2_18:0_CDP_glycerol,C46H83O15N3P2
 cdp12032181g_c,1_20:3_2_18:1_CDP_glycerol,C46H83O15N3P2
 cdp12242181g_c,1_22:4_2_18:1_CDP_glycerol,C48H79O15N3P2
+cdp12252180g_c,1_22:5_2_18:0_CDP_glycerol,C48H79O15N3P2
+cdp12252181g_c,1_22:5_2_18:1_CDP_glycerol,C48H77O15N3P2
 cdp12262180g_c,1_22:6_2_18:0_CDP_glycerol,C48H77O15N3P2
 ps11602140_c,1_16:0_2_14:0_phosphatidylserine,C36H69O8N1P1
 ps11612140_c,1_16:1_2_14:0_phosphatidylserine,C36H67O8N1P1
@@ -113,6 +117,8 @@ ps12032180_c,1_20:3_2_18:0_phosphatidylserine,C44H79O8N1P1
 ps12042180_c,1_20:4_2_18:0_phosphatidylserine,C44H77O8N1P1
 ps12032181_c,1_20:3_2_18:1_phosphatidylserine,C44H77O8N1P1
 ps12242181_c,1_22:4_2_18:1_phosphatidylserine,C46H79O8N1P1
+ps12252180_c,1_22:5_2_18:0_phosphatidylserine,C46H79O8N1P1
+ps12252181_c,1_22:5_2_18:1_phosphatidylserine,C46H77O8N1P1
 ps12262180_c,1_22:6_2_18:0_phosphatidylserine,C46H77O8N1P1
 pa11602140_ap,1_16:0_2_14:0_phosphatidate,C33H63O8P1
 pa11612140_ap,1_16:1_2_14:0_phosphatidate,C33H61O8P1
@@ -131,6 +137,8 @@ pa12032180_ap,1_20:3_2_18:0_phosphatidate,C41H73O8P1
 pa12042180_ap,1_20:4_2_18:0_phosphatidate,C41H71O8P1
 pa12032181_ap,1_20:3_2_18:1_phosphatidate,C41H71O8P1
 pa12242181_ap,1_22:4_2_18:1_phosphatidate,C43H71O8P1
+pa12252180_ap,1_22:5_2_18:0_phosphatidate,C43H71O8P1
+pa12252181_ap,1_22:5_2_18:1_phosphatidate,C43H69O8P1
 pa12262180_ap,1_22:6_2_18:0_phosphatidate,C43H69O8P1
 pe11602140_c,1_16:0_2_14:0_phosphatidylethanolamine,C35H70O8N1P1
 pe11612140_c,1_16:1_2_14:0_phosphatidylethanolamine,C35H68O8N1P1
@@ -149,4 +157,6 @@ pe12032180_c,1_20:3_2_18:0_phosphatidylethanolamine,C43H70O8N1P1
 pe12042180_c,1_20:4_2_18:0_phosphatidylethanolamine,C43H68O8N1P1
 pe12032181_c,1_20:3_2_18:1_phosphatidylethanolamine,C43H68O8N1P1
 pe12242181_c,1_22:4_2_18:1_phosphatidylethanolamine,C45H80O8N1P1
+pe12252180_c,1_22:5_2_18:0_phosphatidylethanolamine,C45H80O8N1P1
+pe12252181_c,1_22:5_2_18:1_phosphatidylethanolamine,C45H78O8N1P1
 pe12262180_c,1_22:6_2_18:0_phosphatidylethanolamine,C45H78O8N1P1
