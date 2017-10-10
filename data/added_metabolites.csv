@@ -83,7 +83,6 @@ pa12242180_c,1_22:4_2_18:0_phosphatidate,C43H73O8P1
 pa12242181_c,1_22:4_2_18:1_phosphatidate,C43H71O8P1
 pa12252180_c,1_22:5_2_18:0_phosphatidate,C43H71O8P1
 pa12252181_c,1_22:5_2_18:1_phosphatidate,C43H69O8P1
-pa12262180_c,1_22:6_2_18:0_phosphatidate,C43H69O8P1
 cdp11602140g_c,1_16:0_2_14:0_CDP_glycerol,C38H75O15N3P2
 cdp11612140g_c,1_16:1_2_14:0_CDP_glycerol,C38H73O15N3P2
 cdp11612160g_c,1_16:1_2_16:0_CDP_glycerol,C40H77O15N3P2
@@ -144,7 +143,6 @@ pa12032181_ap,1_20:3_2_18:1_phosphatidate,C41H71O8P1
 pa12242181_ap,1_22:4_2_18:1_phosphatidate,C43H71O8P1
 pa12252180_ap,1_22:5_2_18:0_phosphatidate,C43H71O8P1
 pa12252181_ap,1_22:5_2_18:1_phosphatidate,C43H69O8P1
-pa12262180_ap,1_22:6_2_18:0_phosphatidate,C43H69O8P1
 pe11602140_c,1_16:0_2_14:0_phosphatidylethanolamine,C35H70O8N1P1
 pe11612140_c,1_16:1_2_14:0_phosphatidylethanolamine,C35H68O8N1P1
 pe11612160_c,1_16:1_2_16:0_phosphatidylethanolamine,C37H72O8N1P1
@@ -299,7 +297,6 @@ g3ps_c,Glycerophosphoserine,C6H13NO8P
 g3ps_e,Glycerophosphoserine,C6H13NO8P
 11602140pc_c,1_16:0_2_14:0_phosphatidylcholine,C38H76O8N1P1
 11602160pc_c,1_16:0_2_16:0_phosphatidylcholine,C40H74O8N1P1
-11612140pc_c,1_16:1_2_14:0_phosphatidylcholine,C38H74O8N1P1
 11612160pc_c,1_16:1_2_16:0_phosphatidylcholine,C40H72O8N1P1
 11802160pc_c,1_18:0_2_16:0_phosphatidylcholine,C42H78O8N1P1
 11812160pc_c,1_18:1_2_16:0_phosphatidylcholine,C42H76O8N1P1
@@ -310,7 +307,6 @@ g3ps_e,Glycerophosphoserine,C6H13NO8P
 11822181pc_c,1_18:2_2_18:1_phosphatidylcholine,C44H76O8N1P1
 11842180pc_c,1_18:4_2_18:0_phosphatidylcholine,C44H74O8N1P1
 12012180pc_c,1_20:1_2_18:0_phosphatidylcholine,C46H84O8N1P1
-12022180pc_c,1_20:2_2_18:0_phosphatidylcholine,C46H82O8N1P1
 12032180pc_c,1_20:3_2_18:0_phosphatidylcholine,C46H80O8N1P1
 12042180pc_c,1_20:4_2_18:0_phosphatidylcholine,C46H78O8N1P1
 12032181pc_c,1_20:3_2_18:1_phosphatidylcholine,C46H78O8N1P1
@@ -319,3 +315,23 @@ g3ps_e,Glycerophosphoserine,C6H13NO8P
 12252180pc_c,1_22:5_2_18:0_phosphatidylcholine,C48H82O8N1P1
 12252181pc_c,1_22:5_2_18:1_phosphatidylcholine,C48H80O8N1P1
 12262180pc_c,1_22:6_2_18:0_phosphatidylcholine,C48H80O8N1P1
+pgp11612160_c,1_16:1_2_16:0_phosphatidylglycerophosphate,C38H74O13P2
+pgp11802160_c,1_18:0_2_16:0_phosphatidylglycerophosphate,C40H80O13P2
+pgp11812160_c,1_18:1_2_16:0_phosphatidylglycerophosphate,C40H78O13P2
+pgp11822160_c,1_18:2_2_16:0_phosphatidylglycerophosphate,C40H76O13P2
+pgp11812161_c,1_18:1_2_16:1_phosphatidylglycerophosphate,C40H76O13P2
+pgp11812180_c,1_18:1_2_18:0_phosphatidylglycerophosphate,C42H82O13P2
+pgp11822180_c,1_18:2_2_18:0_phosphatidylglycerophosphate,C42H80O13P2
+pgp11822181_c,1_18:2_2_18:1_phosphatidylglycerophosphate,C42H78O13P2
+pgp12032180_c,1_20:3_2_18:0_phosphatidylglycerophosphate,C44H82O13P2
+pg11612160_c,1_16:1_2_16:0_phosphatidylglycerol,C38H73O10P1
+pg11802160_c,1_18:0_2_16:0_phosphatidylglycerol,C40H79O10P1
+pg11812160_c,1_18:1_2_16:0_phosphatidylglycerol,C40H77O10P1
+pg11822160_c,1_18:2_2_16:0_phosphatidylglycerol,C40H75O10P1
+pg11812161_c,1_18:1_2_16:1_phosphatidylglycerol,C40H75O10P1
+pg11812180_c,1_18:1_2_18:0_phosphatidylglycerol,C42H81O10P1
+pg11822180_c,1_18:2_2_18:0_phosphatidylglycerol,C42H79O10P1
+pg11822181_c,1_18:2_2_18:1_phosphatidylglycerol,C42H77O10P1
+pg12032180_c,1_20:3_2_18:0_phosphatidylglycerol,C44H81O10P1
+pg12042180_c,1_20:4_2_18:0_phosphatidylglycerol,C44H79O10P1
+pg12032181_c,1_20:3_2_18:1_phosphatidylglycerol,C44H79O10P1
