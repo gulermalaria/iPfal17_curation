@@ -1,6 +1,21 @@
-LPCt,lyso phosphatidylcholine transport/salvage,lpchol_e -> lpchol_c,,,,Phosphatidylcholine metabolism,0,-1000,1000,0,,,added,http://dx.doi.org/10.1016/j.chom.2015.08.003
-DAGK11602140,diacylglycerol kinase,11602140dgr_c + atp_c -> adp_c + h_c + pa11602140_c,(PF14_0681) or (PFI1485c),,,phosphatidic adid production,0,-1000,1000,0,,,added,
-DASYN11602140,phosphatidate cytidylyltransferase,ctp_c + h_c + pa11602140_c -> cdp11602140g_c,(PF14_0097),,,,0,-1000,1000,0,,,added,
-PSSA11602140,CDP-diacylglycerol-serine O-phosphatidyltransferase,cdp11602140g_c + ser_L_c -> cmp_c + h_c + ps11602140_c ,(MAL13P1_335),,,phosphatidylserine production,0,-1000,1000,0,,,added,
-PSD11602140,Phosphatidylserine decarboxylase,h_c + ps11602140_c -> co2_c + pe11602140_c,(PFI1370c),,,phospatidylethanolamine production,0,-1000,1000,0,,,added,
-PE11602140,,pe11602140_c<=> pe_c,,,,,,,,,,,,
+C36H72O13P2
+C36H70O13P2
+C38H74O13P2
+C40H80O13P2
+C40H78O13P2
+C40H76O13P2
+C40H76O13P2
+C42H82O13P2
+C42H80O13P2
+C42H78O13P2
+C42H76O13P2
+C44H86O13P2
+C44H84O13P2
+C44H82O13P2
+C44H80O13P2
+C44H80O13P2
+C46H84O13P2
+C46H82O13P2
+C46H82O13P2
+C46H80O13P2
+C46H80O13P2
