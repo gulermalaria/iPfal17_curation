@@ -31,6 +31,7 @@ ocdctea_ap,octadecatetraenoate_n_C184,C18H27O2
 eic_ap,eicosanoic_n_200,C20H40O2
 eiccoa_ap,eicosanoic_n_200_CoA,C41H74N7O18P3S
 icea_ap,icosenoate_n_C201,C20H37O2
+icea_c,icosenoate_n_C201,C20H37O2
 doco_ap,docosanoic_n_220,C22H44O2
 dococoa_ap,docosanoic_n_200_CoA,C43H78N7O18P3S
 icdea_ap,icosadienoate_n_C202,C20H35O2
@@ -58,12 +59,14 @@ cerocoa_ap,cerotic_n_260_CoA,C49H84N7O18P3S
 11812180dgr_c,1_18:1_2_18:0_diacylglycerol,C33H62O3
 11822180dgr_c,1_18:2_2_18:0_diacylglycerol,C35H60O3
 11822181dgr_c,1_18:2_2_18:1_diacylglycerol,C35H58O3
+11822182dgr_c,1_18:2_2_18:2_diacylglycerol,C35H56O3
 11842180dgr_c,1_18:4_2_18:0_diacylglycerol,C35H56O3
 12012180dgr_c,1_20:1_2_18:0_diacylglycerol,C35H70O3
 12022180dgr_c,1_20:2_2_18:0_diacylglycerol,C35H68O3
 12032180dgr_c,1_20:3_2_18:0_diacylglycerol,C35H66O3
 12042180dgr_c,1_20:4_2_18:0_diacylglycerol,C35H64O3
 12032181dgr_c,1_20:3_2_18:1_diacylglycerol,C35H64O3
+12242180dgr_c,1_22:4_2_18:0_diacylglycerol,C37H68O3
 12242181dgr_c,1_22:4_2_18:1_diacylglycerol,C37H66O3
 12252180dgr_c,1_22:5_2_18:0_diacylglycerol,C37H66O3
 12252181dgr_c,1_22:5_2_18:1_diacylglycerol,C37H64O3
@@ -306,6 +309,7 @@ g3ps_e,Glycerophosphoserine,C6H13NO8P
 11602160pc_c,1_16:0_2_16:0_phosphatidylcholine,C40H74O8N1P1
 11612160pc_c,1_16:1_2_16:0_phosphatidylcholine,C40H72O8N1P1
 11802160pc_c,1_18:0_2_16:0_phosphatidylcholine,C42H78O8N1P1
+11802180pc_c,1_18:0_2_18:0_phosphatidylcholine,C44H82O8N1P1
 11812160pc_c,1_18:1_2_16:0_phosphatidylcholine,C42H76O8N1P1
 11822160pc_c,1_18:2_2_16:0_phosphatidylcholine,C42H74O8N1P1
 11812161pc_c,1_18:1_2_16:1_phosphatidylcholine,C42H74O8N1P1
@@ -500,3 +504,6 @@ all_pg_c,all_phoshphatidylglycerols,
 all_apg_c,all_acylphoshphatidylglycerols,
 all_dgl_c,all_diglycerides,
 acoa_c,acyl-CoA,
+fadh2_ap,FADH2,C27H33N9O15P2
+fadh2_c,FADH2,C27H33N9O15P2
+fad_ap,Flavin_adenine_dinucleotide_oxidized,C27H31N9O15P2
