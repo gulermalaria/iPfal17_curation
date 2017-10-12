@@ -140,13 +140,20 @@ with open(filename, 'r') as handle:
             new_model.metabolites.get_by_id(file[i][0]).formula = file[i][2]
             new_model.metabolites.get_by_id(file[i][0]).name = file[i][1]
 
+comps = new_model.compartments
 missing_metabolite_names = []
 for met in new_model.metabolites:
     if met.name is None:
         missing_metabolite_names.append(met.id)
     metid = met.id
-    met.compartment = metid.split("_")[-1]
-
+    compartment = metid.split("_")[-1]
+    if compartment in comps.keys():
+        met.compartment = compartment
+    else:
+        comps.update({compartment:compartment})
+        met.compartment = compartment
+        print("\nAdded new model compartment: %s" % compartment)
+new_model.compartments = comps
 # Fixing issues rendering the SBML to not pass the validation (specific to Michal's curation)
 new_model.reactions.get_by_id("2.1.1.12").id = "MSMET"
 new_model.reactions.get_by_id("2.4.1.141").id = "UDPGNT"
