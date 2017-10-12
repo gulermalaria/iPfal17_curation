@@ -144,7 +144,10 @@ missing_metabolite_names = []
 for met in new_model.metabolites:
     if met.name is None:
         missing_metabolite_names.append(met.id)
+    metid = met.id
+    met.compartment = metid.split("_")[-1]
 
 print("\n%d metabolites do not have the name attribute after curation\n" % len(missing_metabolite_names))
-
-
+print(missing_metabolite_names)
+filename = dir_path + "/output/curated_model_" + timestr
+cobra.io.write_sbml_model(new_model, filename+".xml", use_fbc_package=True)
