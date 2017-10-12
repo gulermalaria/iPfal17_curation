@@ -487,12 +487,12 @@ lystrna_c,L_Lysine_tRNA(Lys),
 gp4g_c,GppppG,C20H24N10O21P4
 ap4a_c,AppppA,C20H24N10O19P4
 progly_e,L_Prolinylglycine,C7H11N2O3
-idp_c, IDP, C10H12N4O11P2
+idp_c,IDP,C10H12N4O11P2
 sphmyln_e,sphingomyelin,
 sphmyln_host_c,sphingomyelin,
 hmfurn_c,4_hydroxy_5_methyl_3_2H_furanone,C5H5O3
-o2s_c,O2-, O2
-o2s_m,O2-, O2
+o2s_c,O2-,O2
+o2s_m,O2-,O2
 gthox_ap,oxidized_glutathione,C20H30N6O12S2
 gthrd_ap,oxidized_glutathione,C20H30N6O12S2
 h2o2_ap,H2O2,H2O2

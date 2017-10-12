@@ -147,6 +147,13 @@ for met in new_model.metabolites:
     metid = met.id
     met.compartment = metid.split("_")[-1]
 
+# Fixing issues rendering the SBML to not pass the validation (specific to Michal's curation)
+new_model.reactions.get_by_id("2.1.1.12").id = "MSMET"
+new_model.reactions.get_by_id("2.4.1.141").id = "UDPGNT"
+new_model.remove_reactions(new_model.metabolites.get_by_id("Asn_X_Ser/Thr_e").reactions)
+new_model.metabolites.get_by_id("Asn_X_Ser/Thr_e").remove_from_model()
+new_model.metabolites.get_by_id("Asn_X_Ser/Thr_c").remove_from_model()
+
 print("\n%d metabolites do not have the name attribute after curation\n" % len(missing_metabolite_names))
 print(missing_metabolite_names)
 filename = dir_path + "/output/curated_model_" + timestr
