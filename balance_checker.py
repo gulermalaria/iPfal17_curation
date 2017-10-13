@@ -24,8 +24,10 @@ if __name__ == "__main__":
 
     # reactions = tuple(model.metabolites.get_by_id(args.met).reactions)
     if model.reactions.get_by_id(args.reaction).name is None:
-        print("\n" + args.reaction + " balance:\n")
+        print("\n" + args.reaction + " reaction:\n")
     else:
-        print("\n" + args.reaction + " (" + model.reactions.get_by_id(args.reaction).name + ") balance:\n")
+        print("\n" + args.reaction + " (" + model.reactions.get_by_id(args.reaction).name + ") reaction:\n")
+    print(model.reactions.get_by_id(args.reaction).reaction)
+    print("\nBalance:\n")
     print(model.reactions.get_by_id(args.reaction).check_mass_balance())
     print("\n")
