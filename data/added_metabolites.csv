@@ -373,6 +373,8 @@ xolest224_c,22:4_cholersteryl_ester,C49H80O2
 xolest225_c,22:5_cholersteryl_ester,C49H78O2
 xolest226_c,22:6_cholersteryl_ester,C49H76O2
 xolest_c,cholersteryl_ester,
+chsterol_c,cholesterol,C27H46O
+chsterol_e,cholesterol,C27H46O
 pg_c,phosphatidylglycerol,
 sphmyln_e,sphingomyelin,
 sphmyln_host_c,sphingomyelin,
