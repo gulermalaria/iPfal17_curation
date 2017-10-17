@@ -530,5 +530,6 @@ ocdca_e,octadecanoate_n_C180,C18H36O2
 ocdcea_ap,octadecenoate_n_C181,C18H34O2
 ocdcea_c,octadecenoate_n_C181,C18H34O2
 ocdcea_e,octadecenoate_n_C181,C18H34O2
-lpe_c,llysophosphatidylethanolamine_generic,
-lpg_c,llysophosphatidylglycerol_generic,
+lpe_c,lysophosphatidylethanolamine_generic,
+lpg_c,lysophosphatidylglycerol_generic,
+ps_c,phosphatidylserine_generic,
