@@ -76,3 +76,8 @@ Ht,Ht,h[c] <=> h[e],,,,Transport,1,-1000,1000,0,,,,
 ASPTA_mt,aspartate transaminase,akg[m] + asp_L[m] <=> glu_L[m] + oaa[m],(PFB0200c),PFB0200c,,AminoAcids AsnAspMetabolism ; Carbohydrates PyruvateMetabolism ; AminoAcids GluMetabolism,1,-1000,1000,0,,2.6.1.1,removed Mitochondrial version,"Wrenger et al, J Mol Biol 2010"
 O2St,O2St,o2s[c] <=> o2s[e],,,,Transport,1,-1000,1000,0,,,,
 lipid5,Formation of generic PE,pe[c] <==> pe120[c] + pe140[c] + pe141[c] + pe160[c] + pe161[c] + pe180[c] + pe181[c],,,,Lipids,,,,,,,,
+PLIPC,,,,,,,,,,,,,,
+DAGCPT,,,,,,,,,,,,,,
+SMS,,,,,,,,,,,,,,
+pc_prod,,,,,,,,,,,,,,
+PIPLC,phospholipase C generic,h2o[c] + pail[c]  => dag[c] + h[c] + mi1p_D[c] ,(PF10_0132),PF10_0132,,Lipids PhosphatidylcholineMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism ; Lipids UtilizationPhospholipids,0,0,1000,0,,3.1.4.3,,
