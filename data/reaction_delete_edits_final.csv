@@ -85,3 +85,4 @@ GAT_c,GAT_c,dag[c] + acoa[c]  => coa[c] + tag[c] ,(PFC0995c),PFC0995c,,Lipids Li
 DGAT,DGAT,Rtotalcoa[c] + dag[c]  => coa[c] + tag[c] ,,,,Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism,0,0,1000,0,,,,
 dgl_prod1,dgl_prod1,dag[c]  => all_dgl[c] ,,,,Lipids LipidProduction,0,0,1000,0,,,,
 LPS,triacylglycerol lipase,h2o[c] + tag[c]  => Rtotal[c] + dag[c] + h[c] ,,,,Lipids PhosphatidylethanolaminePhosphatidylserineMetabolism,0,0,1000,0,,3.1.1.3,,
+ETHAPT,ethanolaminephosphotransferase,cdpea[c] + 0.01 dag[c]  <=> cmp[c] + h[c] + 0.01 pe[c] ,(PFF1375c),PFF1375c,,Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism,1,-1000,1000,0,,2.7.8.1,,

@@ -72,20 +72,8 @@ print("Number of reactions in original model: %d" % no_of_rxns)
 a = model.optimize()
 print("Original model model growth: %f" % a.f)
 
-for filename in args.delete:
-    with open(filename, 'r') as handle:
-        file = list(csv.reader(handle))
-    for i in range(1, len(file)):
-        try:
-            model.reactions.get_by_id(file[i][0])
-        except KeyError:
-            print('No reaction with ID: %s. Will not be removed' % (file[i][0]))
-        else:
-            model.remove_reactions([file[i][0]])
-    del file, handle, filename
-
 for filename in args.edit:
-    with open(filename, 'r') as handle:
+    with open(filename, 'r', encoding='iso-8859-1') as handle:
         file = list(csv.reader(handle))
     for i in range(1, len(file)):
         try:
@@ -103,6 +91,18 @@ for filename in args.edit:
         model.reactions.get_by_id(file[i][0]).gene_reaction_rule = file[i][3]
         model.reactions.get_by_id(file[i][0]).annotation = file[i][14]
         model.reactions.get_by_id(file[i][0]).notes = file[i][13]
+    del file, handle, filename
+
+for filename in args.delete:
+    with open(filename, 'r') as handle:
+        file = list(csv.reader(handle))
+    for i in range(1, len(file)):
+        try:
+            model.reactions.get_by_id(file[i][0])
+        except KeyError:
+            print('No reaction with ID: %s. Will not be removed' % (file[i][0]))
+        else:
+            model.remove_reactions([file[i][0]])
     del file, handle, filename
 
 no_of_rxns = len(model.reactions)
