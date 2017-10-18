@@ -81,3 +81,7 @@ DAGCPT,,,,,,,,,,,,,,
 SMS,,,,,,,,,,,,,,
 pc_prod,,,,,,,,,,,,,,
 PIPLC,phospholipase C generic,h2o[c] + pail[c]  => dag[c] + h[c] + mi1p_D[c] ,(PF10_0132),PF10_0132,,Lipids PhosphatidylcholineMetabolism ; Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism ; Lipids UtilizationPhospholipids,0,0,1000,0,,3.1.4.3,,
+GAT_c,GAT_c,dag[c] + acoa[c]  => coa[c] + tag[c] ,(PFC0995c),PFC0995c,,Lipids LipidProduction,0,0,1000,0,,2.3.1.20,previously PAPA120:PAP180,"Plasmodb;  doi: 10.1242/jcs.00988, 10.1016/j.molbiopara.2003.08.017"
+DGAT,DGAT,Rtotalcoa[c] + dag[c]  => coa[c] + tag[c] ,,,,Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism,0,0,1000,0,,,,
+dgl_prod1,dgl_prod1,dag[c]  => all_dgl[c] ,,,,Lipids LipidProduction,0,0,1000,0,,,,
+LPS,triacylglycerol lipase,h2o[c] + tag[c]  => Rtotal[c] + dag[c] + h[c] ,,,,Lipids PhosphatidylethanolaminePhosphatidylserineMetabolism,0,0,1000,0,,3.1.1.3,,
