@@ -71,7 +71,7 @@ print("Number of genes in original model: %d" % no_of_genes)
 print("Number of reactions in original model: %d" % no_of_rxns)
 a = model.optimize()
 print("Original model model growth: %f" % a.f)
-
+dict_elements = ['Confidence score', 'EC Number', 'Notes', 'References']
 for filename in args.edit:
     with open(filename, 'r', encoding='iso-8859-1') as handle:
         file = list(csv.reader(handle))
@@ -90,7 +90,11 @@ for filename in args.edit:
         model.reactions.get_by_id(file[i][0]).subsystem = file[i][6]
         model.reactions.get_by_id(file[i][0]).gene_reaction_rule = file[i][3]
         model.reactions.get_by_id(file[i][0]).annotation = file[i][14]
-        model.reactions.get_by_id(file[i][0]).notes = file[i][13]
+        dict_notes = {'Confidence score': [], 'EC Number': [], 'Notes': [], 'References': []}
+        for j in range(0, 3):
+            dict_notes[dict_elements[j]] = [file[i][11+j]]
+        print(dict_notes)
+        model.reactions.get_by_id(file[i][0]).notes = dict_notes
     del file, handle, filename
 
 for filename in args.delete:
