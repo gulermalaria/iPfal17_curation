@@ -85,4 +85,12 @@ GAT_c,GAT_c,dag[c] + acoa[c]  => coa[c] + tag[c] ,(PFC0995c),PFC0995c,,Lipids Li
 DGAT,DGAT,Rtotalcoa[c] + dag[c]  => coa[c] + tag[c] ,,,,Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism,0,0,1000,0,,,,
 dgl_prod1,dgl_prod1,dag[c]  => all_dgl[c] ,,,,Lipids LipidProduction,0,0,1000,0,,,,
 LPS,triacylglycerol lipase,h2o[c] + tag[c]  => Rtotal[c] + dag[c] + h[c] ,,,,Lipids PhosphatidylethanolaminePhosphatidylserineMetabolism,0,0,1000,0,,3.1.1.3,,
-ETHAPT,ethanolaminephosphotransferase,cdpea[c] + 0.01 dag[c]  <=> cmp[c] + h[c] + 0.01 pe[c] ,(PFF1375c),PFF1375c,,Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism,1,-1000,1000,0,,2.7.8.1,,
+ETHAPT,ethanolaminephosphotransferase,cdpea[c] + 0.01 dag[c]  <=> cmp[c] + h[c] + 0.01 pe[c] ,(PFF1375c),PFF1375c,,Lipids PhosphatidyletanolaminePhosphatidylserineMetabolism,1,-1000,1000,0,,2.7.8.1,,doi:10.1128/EC.00255-07
+3OAS181_ap,,h[ap] + hdeACP[ap] + malACP[ap] --> 3ocvac11eACP[ap] +  ACP[ap] + o2[ap],(PFB0505c) or (PFF1275c),PFB0505c PFF1275c,,Lipids_FattyAcidSynthesis,,,,,,2.3.1.41,No fabB/F activity for chains longer than 16 carbons,doi:10.1128/EC.00255-07
+3OAS180_ap,,h[ap] + palmACP[ap] + malACP[ap] --> 3ooctdACP[ap] +  ACP[ap] + o2[ap],(PFB0505c) or (PFF1275c),PFB0505c PFF1275c,,Lipids_FattyAcidSynthesis,,,,,,2.3.1.41,No fabB/F activity for chains longer than 16 carbons,doi:10.1128/EC.00255-06
+3OAR180_ap,,3ooctdACP[ap] + h[ap] + nadph[ap] <==> 3hoctaACP[ap] + nadp[ap],(PFI1125c),PFI1125c,,Lipids_FattyAcidSynthesis,,,,,,1.1.1.100,"Since no fabB/F activity, this reaction is not present either",doi:10.1128/EC.00255-05
+3OAR181_ap,,3ocvac11eACP[ap] + h[ap] + nadph[ap] --> 3hcvac11eACP[ap] + nadp[ap],(PFI1125c),PFI1125c,,Lipids_FattyAcidSynthesis,,,,,,1.1.1.100,"Since no fabB/F activity, this reaction is not present either",doi:10.1128/EC.00255-04
+3HAD180_ap,,3hoctaACP[ap] --> h2o[ap] + toctd2eACP[ap],(PF13_0128),PF13_0128,,Lipids_FattyAcidSynthesis,,,,,,4.2.1.61,"Since no fabB/F activity, this reaction is not present either",doi:10.1128/EC.00255-03
+3HAD181_ap,,3hcvac11eACP[ap] --> h2o[ap] + t3c11vaceACP[ap],(PF13_0128),PF13_0129,,Lipids_FattyAcidSynthesis,,,,,,4.2.1.61,"Since no fabB/F activity, this reaction is not present either",doi:10.1128/EC.00255-02
+EAR180x_ap,,h[ap] + nadh[ap] + toctd2eACP[ap] --> nad[ap] + ocdcaACP[ap],(PFF0730c),PFF0730c,,Lipids_FattyAcidSynthesis,,,,,,4.2.1.62,"Since no fabB/F activity, this reaction is not present either",doi:10.1128/EC.00255-01
+EAR181x_ap,,h[ap] + nadh[ap] + t3c11vaceACP[ap] --> nad[ap] + octeACP[ap],(PFF0730c),PFF0730c,,Lipids_FattyAcidSynthesis,,,,,,4.2.1.63,"Since no fabB/F activity, this reaction is not present either",doi:10.1128/EC.0025500
