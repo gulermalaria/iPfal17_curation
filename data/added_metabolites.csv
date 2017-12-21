@@ -49,7 +49,6 @@ nerv_ap,nervonic_n_241,C24H46O2
 nervcoa_ap,nevonic_n_241_CoA,C45H80N7O17P3S
 cero_ap,cerotic_n_260,C26H52O2
 cerocoa_ap,cerotic_n_260_CoA,C47H86N7O17P3S1
-<<<<<<< HEAD
 11602140dgr_c,1_16:0_2_14:0_diacylglycerol,C33H64O5
 11602160dgr_c,1_16:0_2_16:0_diacylglycerol,C35H70O5
 11612140dgr_c,1_16:1_2_14:0_diacylglycerol,C33H62O5
@@ -73,7 +72,6 @@ cerocoa_ap,cerotic_n_260_CoA,C47H86N7O17P3S1
 12252180dgr_c,1_22:5_2_18:0_diacylglycerol,C43H74O5
 12252181dgr_c,1_22:5_2_18:1_diacylglycerol,C43H72O5
 12262180dgr_c,1_22:6_2_18:0_diacylglycerol,C43H70O5
-=======
 11602140dgr_c,1_16:0_2_14:0_diacylglycerol,C31H68O5
 11602160dgr_c,1_16:0_2_16:0_diacylglycerol,C33H74O5
 11612140dgr_c,1_16:1_2_14:0_diacylglycerol,C31H66O5
@@ -85,7 +83,6 @@ cerocoa_ap,cerotic_n_260_CoA,C47H86N7O17P3S1
 11812180dgr_c,1_18:1_2_18:0_diacylglycerol,C37H74O5
 11822180dgr_c,1_18:2_2_18:0_diacylglycerol,C39H72O5
 11822181dgr_c,1_18:2_2_18:1_diacylglycerol,C39H70O5
-11822182dgr_c,1_18:2_2_18:2_diacylglycerol,C39H68O5
 11842180dgr_c,1_18:4_2_18:0_diacylglycerol,C39H68O5
 12012180dgr_c,1_20:1_2_18:0_diacylglycerol,C39H82O5
 12022180dgr_c,1_20:2_2_18:0_diacylglycerol,C39H80O5
@@ -97,7 +94,6 @@ cerocoa_ap,cerotic_n_260_CoA,C47H86N7O17P3S1
 12252180dgr_c,1_22:5_2_18:0_diacylglycerol,C41H78O5
 12252181dgr_c,1_22:5_2_18:1_diacylglycerol,C41H76O5
 12262180dgr_c,1_22:6_2_18:0_diacylglycerol,C41H74O5
->>>>>>> master
 pa11602140_c,1_16:0_2_14:0_phosphatidate,C33H63O8P1
 pa11612140_c,1_16:1_2_14:0_phosphatidate,C33H61O8P1
 pa11612160_c,1_16:1_2_16:0_phosphatidate,C35H65O8P1
@@ -140,7 +136,6 @@ cdp12242181g_c,1_22:4_2_18:1_CDP_glycerol,C52H81O15N3P2
 cdp12252180g_c,1_22:5_2_18:0_CDP_glycerol,C52H81O15N3P2
 cdp12252181g_c,1_22:5_2_18:1_CDP_glycerol,C52H79O15N3P2
 cdp12262180g_c,1_22:6_2_18:0_CDP_glycerol,C52H79O15N3P2
-<<<<<<< HEAD
 ps11602140_c,1_16:0_2_14:0_phosphatidylserine,C36H70O10N1P1
 ps11612140_c,1_16:1_2_14:0_phosphatidylserine,C36H68O10N1P1
 ps11612160_c,1_16:1_2_16:0_phosphatidylserine,C38H72O10N1P1
@@ -162,7 +157,6 @@ ps12242181_c,1_22:4_2_18:1_phosphatidylserine,C46H80O10N1P1
 ps12252180_c,1_22:5_2_18:0_phosphatidylserine,C46H80O10N1P1
 ps12252181_c,1_22:5_2_18:1_phosphatidylserine,C46H78O10N1P1
 ps12262180_c,1_22:6_2_18:0_phosphatidylserine,C46H78O10N1P1
-=======
 ps11602140_c,1_16:0_2_14:0_phosphatidylserine,C36H69O8N1P1
 ps11612140_c,1_16:1_2_14:0_phosphatidylserine,C36H67O8N1P1
 ps11612160_c,1_16:1_2_16:0_phosphatidylserine,C38H71O8N1P1
@@ -184,7 +178,6 @@ ps12242181_c,1_22:4_2_18:1_phosphatidylserine,C46H79O8N1P1
 ps12252180_c,1_22:5_2_18:0_phosphatidylserine,C46H79O8N1P1
 ps12252181_c,1_22:5_2_18:1_phosphatidylserine,C46H77O8N1P1
 ps12262180_c,1_22:6_2_18:0_phosphatidylserine,C46H77O8N1P1
->>>>>>> master
 pa11602140_ap,1_16:0_2_14:0_phosphatidate,C33H63O8P1
 pa11612140_ap,1_16:1_2_14:0_phosphatidate,C33H61O8P1
 pa11612160_ap,1_16:1_2_16:0_phosphatidate,C35H65O8P1
@@ -401,9 +394,9 @@ pg12042180_c,1_20:4_2_18:0_phosphatidylglycerol,C44H79O10P1
 pg12032181_c,1_20:3_2_18:1_phosphatidylglycerol,C44H79O10P1
 ptd345inotp_c,phosphatidylinositol_345_triphosphate,
 ptd34inobp_c,phosphatidylinositol_34_biphosphate,
-1180lysoptd1ino_c,1_18:0_lysophosphatidylinositol,C27H52O12P
-1204lysoptd1ino_c,1_20:4_lysophosphatidylinositol,C29H48O12P
-1160lysoptd1ino_c,1_16:0_lysophosphatidylinositol,C25H48O12P
+1180lysoptd1ino_c,1_18:0_lysophosphatidylinositol,C27H52O12P1
+1204lysoptd1ino_c,1_20:4_lysophosphatidylinositol,C29H48O12P1
+1160lysoptd1ino_c,1_16:0_lysophosphatidylinositol,C25H48O12P1
 160lpchol_c,1_16:0_lysophosphatidylcholine,C24H51NO7P1
 180lpchol_c,1_18:0_lysophosphatidylcholine,C26H55NO7P1
 181lpchol_c,1_18:1_lysophosphatidylcholine,C26H53NO7P1
@@ -423,13 +416,13 @@ xolest224_c,22:4_cholersteryl_ester,C49H80O2
 xolest225_c,22:5_cholersteryl_ester,C49H78O2
 xolest226_c,22:6_cholersteryl_ester,C49H76O2
 xolest_c,cholersteryl_ester,
-chsterol_c,cholesterol,C27H46O
-chsterol_e,cholesterol,C27H46O
+chsterol_c,cholesterol,C27H46O1
+chsterol_e,cholesterol,C27H46O1
 pg_c,phosphatidylglycerol,
 sphmyln_e,sphingomyelin,
 sphmyln_host_c,sphingomyelin,
-1160g3p_c,16:0_glycerol_3_phosphate,C19H39O7P
-1161g3p_c,16:1_glycerol_3_phosphate,C19H37O7P
+1160g3p_c,16:0_glycerol_3_phosphate,C19H39O7P1
+1161g3p_c,16:1_glycerol_3_phosphate,C19H37O7P1
 clpn120_c,12:0_cardiolipin,C57H110O17P2
 clpn140_c,14:0_cardiolipin,C65H126O17P2
 clpn141_c,14:1_cardiolipin,C65H118O17P2
@@ -586,13 +579,22 @@ ocdcea_e,octadecenoate_n_C181,C18H34O2
 lpe_c,lysophosphatidylethanolamine_generic,
 lpg_c,lysophosphatidylglycerol_generic,
 ps_c,phosphatidylserine_generic,
-<<<<<<< HEAD
 glyc3p_ap,Glycerol_3_phosphate,C3H9O6P1
 glyc3p_c,Glycerol_3_phosphate,C3H9O6P1
 glyc3p_m,Glycerol_3_phosphate,C3H9O6P1
 cholp_c,Choline_phosphate,C5H15NO4P1
-=======
-glyc3p_ap,Glycerol_3_phosphate,C3H9O6P
-glyc3p_c,Glycerol_3_phosphate,C3H9O6P
-glyc3p_m,Glycerol_3_phosphate,C3H9O6P
->>>>>>> master
+glyc3p_ap,Glycerol_3_phosphate,C3H9O6P1
+glyc3p_c,Glycerol_3_phosphate,C3H9O6P1
+glyc3p_m,Glycerol_3_phosphate,C3H9O6P1
+1160mgr_c,1_16:0_acylglycerol,C19H38O4
+1161mgr_c,1_16:1_acylglycerol,C19H36O4
+1180mgr_c,1_18:0_acylglycerol,C21H42O4
+1181mgr_c,1_18:1_acylglycerol,C21H40O4
+1182mgr_c,1_18:2_acylglycerol,C21H38O4
+1184mgr_c,1_18:4_acylglycerol,C21H34O4
+1203mgr_c,1_20:3_acylglycerol,C23H38O4
+1204mgr_c,1_20:4_acylglycerol,C23H40O4
+1226mgr_c,1_22:6_acylglycerol,C25H44O4
+123tgr181_c,1_18:1_2_18:1_3_18:1_triacylglycerol,C57H104O6
+12dgr182_c,1_18:2_2_18:2_diacylglycerol,C39H68O5
+123tgr160_c,1_16:0_2_16:0_3_16:0_triacylglycerol,C51H92O6
