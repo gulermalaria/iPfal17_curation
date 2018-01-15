@@ -50,7 +50,6 @@ nervcoa_ap,nevonic_n_241_CoA,C45H80N7O17P3S
 cero_ap,cerotic_n_260,C26H52O2
 cerocoa_ap,cerotic_n_260_CoA,C47H86N7O17P3S1
 11602140dgr_c,1_16:0_2_14:0_diacylglycerol,C33H64O5
-11602160dgr_c,1_16:0_2_16:0_diacylglycerol,C35H70O5
 11612140dgr_c,1_16:1_2_14:0_diacylglycerol,C33H62O5
 11612160dgr_c,1_16:1_2_16:0_diacylglycerol,C35H68O5
 11802160dgr_c,1_18:0_2_16:0_diacylglycerol,C37H72O5
@@ -60,7 +59,6 @@ cerocoa_ap,cerotic_n_260_CoA,C47H86N7O17P3S1
 11812180dgr_c,1_18:1_2_18:0_diacylglycerol,C39H70O5
 11822180dgr_c,1_18:2_2_18:0_diacylglycerol,C41H68O5
 11822181dgr_c,1_18:2_2_18:1_diacylglycerol,C41H66O5
-11822182dgr_c,1_18:2_2_18:2_diacylglycerol,C41H64O5
 11842180dgr_c,1_18:4_2_18:0_diacylglycerol,C41H64O5
 12012180dgr_c,1_20:1_2_18:0_diacylglycerol,C41H78O5
 12022180dgr_c,1_20:2_2_18:0_diacylglycerol,C41H76O5
@@ -73,7 +71,6 @@ cerocoa_ap,cerotic_n_260_CoA,C47H86N7O17P3S1
 12252181dgr_c,1_22:5_2_18:1_diacylglycerol,C43H72O5
 12262180dgr_c,1_22:6_2_18:0_diacylglycerol,C43H70O5
 11602140dgr_c,1_16:0_2_14:0_diacylglycerol,C31H68O5
-11602160dgr_c,1_16:0_2_16:0_diacylglycerol,C33H74O5
 11612140dgr_c,1_16:1_2_14:0_diacylglycerol,C31H66O5
 11612160dgr_c,1_16:1_2_16:0_diacylglycerol,C33H72O5
 11802160dgr_c,1_18:0_2_16:0_diacylglycerol,C35H76O5
@@ -198,6 +195,7 @@ pa12242181_ap,1_22:4_2_18:1_phosphatidate,C43H71O8P1
 pa12252180_ap,1_22:5_2_18:0_phosphatidate,C43H71O8P1
 pa12252181_ap,1_22:5_2_18:1_phosphatidate,C43H69O8P1
 pe11602140_c,1_16:0_2_14:0_phosphatidylethanolamine,C35H70O8N1P1
+pe11602160_c,1_16:0_2_16:0_phosphatidylethanolamine,C37H74O8N1P1
 pe11612140_c,1_16:1_2_14:0_phosphatidylethanolamine,C35H68O8N1P1
 pe11612160_c,1_16:1_2_16:0_phosphatidylethanolamine,C37H72O8N1P1
 pe11802160_c,1_18:0_2_16:0_phosphatidylethanolamine,C39H78O8N1P1
