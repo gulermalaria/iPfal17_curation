@@ -1,7 +1,7 @@
 import csv
 import argparse
 import re
-
+import cobra
 
 if __name__ == "__main__":
     description = '''Script changing metabolite names from *numbers_* to numbers*_*'''
@@ -10,6 +10,8 @@ if __name__ == "__main__":
                         help="The path to csv file with third column with metabolite names to be changed")
     parser.add_argument("-m", action="store", dest="met_name", required=True,
                         help="Generic name of the metabolite to be changed")
+    parser.add_argument("-mdl", action="store", dest="model", required=True,
+                        help="The path to the SBML model file")
 
     # Argument checking section
     args = parser.parse_args()
@@ -19,15 +21,36 @@ with open(args.filename, 'r') as handle:
     file = list(csv.reader(handle))
     with open(args.filename + '_' + met, 'w+') as handle_write:
         file_write = list(csv.reader(handle_write))
-        for i in range(1, len(file)):
+        for i in range(0, len(file)):
             line = file[i][0]
             if re.search(r'([a-z]*%s[a-z]*)(\d+)_(\w)' % met, line) is not None:
                 match = re.search(r'([a-z]*%s[a-z]*)(\d+)_(\w)' % met, line)
                 new = match.groups()[1] + match.groups()[0] + '_' + match.groups()[2]
                 new_line = line[0:match.span()[0]] + new + line[match.span()[1]:]
-                handle_write.write(new_line + "\n")
+                if re.search(r'([a-z]*%s[a-z]*)(\d+)_(\w)' % met, new_line) is not None:
+                    match = re.search(r'([a-z]*%s[a-z]*)(\d+)_(\w)' % met, new_line)
+                    new = match.groups()[1] + match.groups()[0] + '_' + match.groups()[2]
+                    new_new_line = new_line[0:match.span()[0]] + new + new_line[match.span()[1]:]
+                    handle_write.write(new_new_line + "\n")
+                else:
+                    handle_write.write(new_line + "\n")
             else:
                 handle_write.write(line + "\n")
+
+model = cobra.io.read_sbml_model(args.model)
+
+for met in ['pa', 'pe', 'ps', 'pg', 'pgp', 'crm', 'dhcrm', 'sphmyln', 'xolest']:
+    for metabolite in model.metabolites:
+        if re.search(r'([a-z]*%s[a-z]*)(\d+)_(\w)' % met, metabolite.id):
+            match = re.search(r'([a-z]*%s[a-z]*)(\d+)_(\w)' % met, metabolite.id)
+            new = match.groups()[1] + match.groups()[0] + '_' + match.groups()[2]
+            try:
+                model.metabolites.get_by_id(new)
+            except KeyError:
+                print('No met with ID')
+            else:
+                model.metabolites.get_by_id(new).remove_from_model()
+            model.metabolites.get_by_id(metabolite.id).id = new
 
 
 
