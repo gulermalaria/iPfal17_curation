@@ -14,10 +14,20 @@ if __name__ == "__main__":
     # Argument checking section
     args = parser.parse_args()
 
+met = args.met_name
 with open(args.filename, 'r') as handle:
     file = list(csv.reader(handle))
-for i in range(1, len(file)):
-    print(file[i][2])
-    if re.search(r'(args.met_name)(\d+)_(\w)', file[i][2]) is not None:
-        print("TAK")
+    with open(args.filename + '_' + met, 'w+') as handle_write:
+        file_write = list(csv.reader(handle_write))
+        for i in range(1, len(file)):
+            line = file[i][0]
+            if re.search(r'([a-z]*%s[a-z]*)(\d+)_(\w)' % met, line) is not None:
+                match = re.search(r'([a-z]*%s[a-z]*)(\d+)_(\w)' % met, line)
+                new = match.groups()[1] + match.groups()[0] + '_' + match.groups()[2]
+                new_line = line[0:match.span()[0]] + new + line[match.span()[1]:]
+                handle_write.write(new_line + "\n")
+            else:
+                handle_write.write(line + "\n")
+
+
 
