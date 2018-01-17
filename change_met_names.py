@@ -10,8 +10,6 @@ if __name__ == "__main__":
                         help="The path to csv file with third column with metabolite names to be changed")
     parser.add_argument("-m", action="store", dest="met_name", required=True,
                         help="Generic name of the metabolite to be changed")
-    parser.add_argument("-mdl", action="store", dest="model", required=True,
-                        help="The path to the SBML model file")
 
     # Argument checking section
     args = parser.parse_args()
@@ -37,20 +35,7 @@ with open(args.filename, 'r') as handle:
             else:
                 handle_write.write(line + "\n")
 
-model = cobra.io.read_sbml_model(args.model)
 
-for met in ['pa', 'pe', 'ps', 'pg', 'pgp', 'crm', 'dhcrm', 'sphmyln', 'xolest']:
-    for metabolite in model.metabolites:
-        if re.search(r'([a-z]*%s[a-z]*)(\d+)_(\w)' % met, metabolite.id):
-            match = re.search(r'([a-z]*%s[a-z]*)(\d+)_(\w)' % met, metabolite.id)
-            new = match.groups()[1] + match.groups()[0] + '_' + match.groups()[2]
-            try:
-                model.metabolites.get_by_id(new)
-            except KeyError:
-                print('No met with ID')
-            else:
-                model.metabolites.get_by_id(new).remove_from_model()
-            model.metabolites.get_by_id(metabolite.id).id = new
 
 
 
