@@ -132,7 +132,7 @@ for met in new_model.metabolites:
 
 print("\nStarting metabolites attributes curation.\n%d metabolites do not have the name attribute prior to curaton\n" % len(missing_metabolite_names))
 
-filename = "/home/mstolarczyk/PycharmProjects/uva/data/added_metabolites.csv"
+filename = "data/added_metabolites.csv"
 with open(filename, 'r') as handle:
     file = list(csv.reader(handle))
     for i in range(1, len(file)):
