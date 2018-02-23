@@ -29,6 +29,7 @@ for met in ['pa', 'pe', 'ps', 'pg', 'pgp', 'crm', 'dhcrm', 'sphmyln', 'xolest']:
                 print('No met with this ID. Adding...')
             else:
                 model.metabolites.get_by_id(new).remove_from_model()
+#this line changes the metabolite ID everywhere it appears
             model.metabolites.get_by_id(metabolite.id).id = new
 
 val_after = model.optimize().f

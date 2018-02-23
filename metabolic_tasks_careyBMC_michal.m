@@ -14,7 +14,8 @@ cd /home/mstolarczyk/Uczelnia/UVA/my_analysis/
 %%%%% add COBRA, TIGER, and Gurobi licence to path
 %% Initialize COBRA
 initCobraToolbox % this only needs to be run once
-model = readCbModel('/home/mstolarczyk/PycharmProjects/uva/output/curated_model_2018_01_17_11:05:50.xml');
+sbml_model_file = strcat('/home/mstolarczyk/Uczelnia/UVA/iPfal17_curation/output/',getlatestfile('/home/mstolarczyk/Uczelnia/UVA/iPfal17_curation/output/')); %get the latest version of the model in the dir
+model = readCbModel(sbml_model_file);
 
 opt = optimizeCbModel(model);
 lethal = 0;
