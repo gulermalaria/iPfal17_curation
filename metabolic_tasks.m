@@ -12,7 +12,8 @@
 clear all;close all;clc
 cd /home/mstolarczyk/Uczelnia/UVA/my_analysis/
 %%%%% add COBRA, TIGER, and Gurobi licence to path
-%% Initialize COBRA
+
+% Initialize COBRA
 initCobraToolbox % this only needs to be run once
 sbml_model_file = strcat('/home/mstolarczyk/Uczelnia/UVA/iPfal17_curation/output/',getlatestfile('/home/mstolarczyk/Uczelnia/UVA/iPfal17_curation/output/')); %get the latest version of the model in the dir
 model = readCbModel(sbml_model_file);
@@ -272,7 +273,7 @@ end
 % reaction for each metabolite
 
 ex_rx = model.rxns(findExcRxns(model));
-model_mod = changeRxnBounds(model,ex_rx,0,'l');
+model_mod = changeRxnBounds(model,ex_rx,0,'b');
 vec = model_mod.mets;
 
 model_mod = changeRxnBounds(model_mod,{'trdrd_exp','EX_hb','fldox_exp',...
@@ -291,6 +292,8 @@ for i = 1:length(model_mod.mets)
             warning('Non-zero')
             disp(opt.f)
             vec{i} = 1;
+            %break
+            %fluxes_leaky{i} = horzcat(model2.rxnNames(find(opt.v>0.000001)),num2cell(opt.v(find(opt.v>0.000001))));
         end
     end
 end

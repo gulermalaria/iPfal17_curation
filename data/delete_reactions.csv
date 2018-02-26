@@ -94,3 +94,8 @@ ETHAPT,ethanolaminephosphotransferase,cdpea[c] + 0.01 dag[c]  <=> cmp[c] + h[c] 
 3HAD181_ap,,3hcvac11eACP[ap] --> h2o[ap] + t3c11vaceACP[ap],(PF13_0128),PF13_0129,,Lipids_FattyAcidSynthesis,,,,,,4.2.1.61,"Since no fabB/F activity, this reaction is not present either",doi:10.1128/EC.00255-02
 EAR180x_ap,,h[ap] + nadh[ap] + toctd2eACP[ap] --> nad[ap] + ocdcaACP[ap],(PFF0730c),PFF0730c,,Lipids_FattyAcidSynthesis,,,,,,4.2.1.62,"Since no fabB/F activity, this reaction is not present either",doi:10.1128/EC.00255-01
 EAR181x_ap,,h[ap] + nadh[ap] + t3c11vaceACP[ap] --> nad[ap] + octeACP[ap],(PFF0730c),PFF0730c,,Lipids_FattyAcidSynthesis,,,,,,4.2.1.63,"Since no fabB/F activity, this reaction is not present either",doi:10.1128/EC.0025500
+EX_pyr_LPAREN_e_RPAREN_,pyruvate export ,  --> pyr_e,,,,,,,,,,,,other reaction fulfills the export function (PYRt2r)
+EX_h_LPAREN_e_RPAREN_,,,,,,,,,,,,,,
+lipid3,Multiple dag species assignemnt to dag_c,,,,,,,,,,,,,not biologically supported
+lipid8,Multiple dag species assignemnt to  dag_e,,,,,,,,,,,,,not biologically supported
+lipid10,Multiple pe species assignemnt to  pe_e,,,,,,,,,,,,,not biologically supported
