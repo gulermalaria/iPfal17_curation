@@ -1,4 +1,0 @@
-
-python curation_script_cmd.py -m data/plata_sbml_up_model.xml -d data/reaction_delete_edits_final.csv -e data/edits_additions_or_modifications_final.csv data/biomass_edits_final.csv
-
-python rxns_browser.py -m sphmyln160_c -mdl output/curated_model_2018_01_15_13\:13\:43.xml
