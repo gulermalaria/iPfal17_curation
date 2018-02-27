@@ -543,8 +543,6 @@ all_pe_c,all_phoshphatidylethanolamines,
 all_ps_c,all_phoshphatidyserines,
 all_pi_c,all_phoshphatidylinositols,
 all_pg_c,all_phoshphatidylglycerols,
-all_apg_c,all_acylphoshphatidylglycerols,
-all_dgl_c,all_diglycerides,
 acoa_c,acyl-CoA,
 fadh2_ap,FADH2,C27H33N9O15P2
 fadh2_c,FADH2,C27H33N9O15P2
@@ -557,7 +555,6 @@ adp_c,ADP,C10H15N5O10P2
 adp_m,ADP,C10H15N5O10P2
 amp_ap,AMP,C10H14N5O7P1
 amp_c,AMP,C10H14N5O7P1
-amp_m,AMP,C10H14N5O7P1
 cdp_c,CDP,C9H12N3O11P2
 cmp_c,CMP,C9H14N3O8P1
 pi_ap,Phosphate,H3O4P1
@@ -594,4 +591,4 @@ glyc3p_m,Glycerol_3_phosphate,C3H9O6P1
 123tgr181_c,1_18:1_2_18:1_3_18:1_triacylglycerol,C57H104O6
 12dgr182_c,1_18:2_2_18:2_diacylglycerol,C39H68O5
 123tgr160_c,1_16:0_2_16:0_3_16:0_triacylglycerol,C51H92O6
-sprm_c,spermine,C10H30N4
+sperm_c,spermine,C10H30N4

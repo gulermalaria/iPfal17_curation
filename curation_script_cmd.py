@@ -60,7 +60,7 @@ timestr = time.strftime("%Y_%m_%d_%H:%M:%S")
 
 
 def to_bool(s):
-    return True if int(s) == 1 else False
+    return True if s == 1 else False
 
 
 plata = cobra.io.read_sbml_model(args.model)
@@ -71,7 +71,7 @@ print("Number of genes in original model: %d" % no_of_genes)
 print("Number of reactions in original model: %d" % no_of_rxns)
 a = model.optimize()
 print("Original model model growth: %f" % a.f)
-dict_elements = ['Confidence score', 'EC Number', 'Notes', 'References']
+dict_elements = ['GENE ASSOCIATION', 'CONFIDENCE LEVEL', 'EC NUMBER', 'AUTHORS']
 for filename in args.edit:
     with open(filename, 'r', encoding='iso-8859-1') as handle:
         file = list(csv.reader(handle))
@@ -90,11 +90,11 @@ for filename in args.edit:
         model.reactions.get_by_id(file[i][0]).subsystem = file[i][6]
         model.reactions.get_by_id(file[i][0]).gene_reaction_rule = file[i][3]
         model.reactions.get_by_id(file[i][0]).annotation = file[i][14]
-        dict_notes = {'Confidence score': [], 'EC Number': [], 'Notes': [], 'References': []}
-        for j in range(0, 3):
-            dict_notes[dict_elements[j]] = [file[i][11+j]]
-        #print(dict_notes)
+        dict_notes = {'GENE ASSOCIATION': [''], 'CONFIDENCE LEVEL': [''], 'EC NUMBER': [''], 'AUTHORS': ['']}
+        for j in range(1, 2):
+            dict_notes[dict_elements[j]] = [str(file[i][11+j])]
         model.reactions.get_by_id(file[i][0]).notes = dict_notes
+        print(model.reactions.get_by_id(file[i][0]).notes)
     del file, handle, filename
 
 for filename in args.delete:
@@ -118,12 +118,9 @@ a = model.optimize()
 print("Modified model growth: %f" % a.f)
 filename = dir_path + "/output/curated_model_" + timestr
 
-cobra.io.save_json_model(model, filename + ".json")
-cobra.io.save_matlab_model(model, filename + ".mat")
-cobra.io.write_sbml_model(model, filename+".xml", use_fbc_package=True)
+cobra.io.write_sbml_model(model, filename+".xml")
 
 new_model = cobra.io.read_sbml_model(filename+".xml")
-
 
 missing_metabolite_names = []
 for met in new_model.metabolites:
@@ -132,7 +129,7 @@ for met in new_model.metabolites:
 
 print("\nStarting metabolites attributes curation.\n%d metabolites do not have the name attribute prior to curaton\n" % len(missing_metabolite_names))
 
-filename = "data/added_metabolites.csv"
+filename = "/home/mstolarczyk/Uczelnia/UVA/iPfal17_curation/data/added_metabolites.csv"
 with open(filename, 'r') as handle:
     file = list(csv.reader(handle))
     for i in range(1, len(file)):
@@ -158,7 +155,7 @@ for met in new_model.metabolites:
         met.compartment = compartment
         print("\nAdded new model compartment: %s" % compartment)
 new_model.compartments = comps
-# Fixing issues rendering the SBML to not pass the validation (specific to Michal's curation)
+# Fixing issues rendering the SBML not to pass the validation (specific to Michal's curation)
 new_model.reactions.get_by_id("2.1.1.12").id = "MSMET"
 new_model.reactions.get_by_id("2.4.1.141").id = "UDPGNT"
 new_model.remove_reactions(new_model.metabolites.get_by_id("Asn_X_Ser/Thr_e").reactions)
@@ -168,4 +165,5 @@ new_model.metabolites.get_by_id("Asn_X_Ser/Thr_c").remove_from_model()
 print("\n%d metabolites do not have the name attribute after curation\n" % len(missing_metabolite_names))
 print(missing_metabolite_names)
 filename = dir_path + "/output/curated_model_" + timestr
-cobra.io.write_sbml_model(new_model, filename+".xml", use_fbc_package=True)
+cobra.io.write_sbml_model(new_model, filename+".xml")
+cobra.io.save_json_model(new_model, filename+".json")
