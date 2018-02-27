@@ -60,7 +60,7 @@ timestr = time.strftime("%Y_%m_%d_%H:%M:%S")
 
 
 def to_bool(s):
-    return True if s == 1 else False
+    return True if int(s) == 1 else False
 
 
 plata = cobra.io.read_sbml_model(args.model)
@@ -93,7 +93,7 @@ for filename in args.edit:
         dict_notes = {'Confidence score': [], 'EC Number': [], 'Notes': [], 'References': []}
         for j in range(0, 3):
             dict_notes[dict_elements[j]] = [file[i][11+j]]
-        print(dict_notes)
+        #print(dict_notes)
         model.reactions.get_by_id(file[i][0]).notes = dict_notes
     del file, handle, filename
 

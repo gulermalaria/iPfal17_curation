@@ -20,6 +20,8 @@ with open(args.filename, 'r') as handle:
             if re.search(r'>', line) is not None:
                 if re.search(r'<', line) is not None:
                     file[i][7] = str(1)
+                    file[i][8] = str(-1000)
                 else:
                     file[i][7] = str(0)
+                    file[i][8] = str(0)
             handle_write.write(','.join(file[i]) + "\n")
