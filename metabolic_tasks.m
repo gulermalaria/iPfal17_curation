@@ -286,22 +286,20 @@ for i = 1:length(model_mod.mets)
         vec{i} = 0; % BUT CHECK IN NEXT STEP
     else model2 = changeObjective(model2,newRxn);
         opt = optimizeCbModel(model2);
-        if opt.f <= 0.000001 
+        if opt.f <= 0.00001 
             vec{i} = 0;
         else
             warning('Non-zero')
             disp(opt.f)
+            m=vec{i};
             vec{i} = 1;
-            %break
-            %fluxes_leaky{i} = horzcat(model2.rxnNames(find(opt.v>0.000001)),num2cell(opt.v(find(opt.v>0.000001))));
+            t = table(model2.rxns(abs(opt.x)>0), printRxnFormula(model2,model2.rxns(abs(opt.x)>0)),opt.x(abs(opt.x)>0));
+            writetable(t,strcat('/home/mstolarczyk/Uczelnia/UVA/iPfal17_curation/rxnsLeaky_',m,'.csv'))
         end
     end
 end
-leaky_mets = model_mod.mets(logical(cell2mat(vec)))
-% 
-% t = table(model2.rxns(abs(opt.x)>0),...
-% printRxnFormula(model2,model2.rxns(abs(opt.x)>0)),opt.x(abs(opt.x)>0))
 
+%%
 vec2 = ex_rx;
 for i = 1:length(ex_rx)
     model2 = changeObjective(model_mod,ex_rx(i));
