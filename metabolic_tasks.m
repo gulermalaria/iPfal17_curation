@@ -20,7 +20,7 @@ model = readCbModel(sbml_model_file);
 
 opt = optimizeCbModel(model);
 lethal = 0;
-frac = opt.f*.9; 
+frac = round(opt.f,5)*.9; 
 
 %% Do antimetabolites of riboflavin, nicotinamide, pyridoxine, and thiamine 
 % inhibit growth? (Nutritional requirements of Plasmodium falciparum 
@@ -31,7 +31,7 @@ frac = opt.f*.9;
 % findRxnsFromMets(model,'ribflv[c]')
 ribo = removeRxns(model,{'RBFK';'RIBFLVt2';'ACP1'});
 opt = optimizeCbModel(ribo);
-if (opt.f > frac)
+if (round(opt.f,5) > frac)
     warning('FAILS 1a: Model grows with riboflavin antimetabolite')
 end
 
@@ -39,7 +39,7 @@ end
 % findRxnsFromMets(model,'ncam[c]')
 nico = removeRxns(model,{'NNAM';'EX_nicotinamide2'});
 opt = optimizeCbModel(nico);
-if (opt.f > frac)
+if (round(opt.f,5) > frac)
     warning('FAILS 1c: Model grows with nicotinamide antimetabolite')
 end
 % Fails, but there are many ways to make NAD+ and NADP+
@@ -50,7 +50,7 @@ end
 % findRxnsFromMets(model,'pydxn[c]')
 pyro = removeRxns(model,{'PYDXNK';'PDXPP';'PYDXNtr'});
 opt = optimizeCbModel(pyro);
-if (opt.f > frac)
+if (round(opt.f,5) > frac)
     warning('FAILS 1d: Model grows with pyridoxine antimetabolite')
 end
 % Fails, maybe antimetabolite has off target effects?
@@ -59,7 +59,7 @@ end
 % findRxnsFromMets(model,'thm[c]')
 thi = removeRxns(model,{'TMDPK';'THMP';'THMDP';'THMt3'});
 opt = optimizeCbModel(thi);
-if (opt.f > frac)
+if (round(opt.f,5) > frac)
     warning('FAILS 1b: Model grows with thiamine antimetabolite')
 end
 % FAILS
@@ -70,7 +70,7 @@ atp_pre = changeRxnBounds(model,exchange_rxns,0,'u');
 atp = addDemandReaction(atp_pre,'atp[c]');
 atp = changeObjective(atp,'DM_atp[c]');
 opt = optimizeCbModel(atp);
-if (opt.f > frac)
+if (round(opt.f,5) > frac)
     warning('FAILS 2b: Model produces ATP when all import reactions are blocked')
 end
 % PASSES
@@ -80,7 +80,7 @@ end
 pur = changeRxnBounds(model,{'MTAADA';'ADEt';'dIMP_t';'INSt';'ADNt';...
     'GUAt';'DADNt4';'DGSNt';'DINt';'GSNt';'PAPt';'XANt'},0,'u');
 opt = optimizeCbModel(pur);
-if (opt.f <= (lethal))
+if (round(opt.f,5) <= (lethal))
     warning('FAILS 3b: Model does not grow in in vitro conditions with hypoxanthine as the sole purine')
 end
 % PASSES
@@ -101,9 +101,10 @@ end
 pur = changeRxnBounds(model,{'MTAADA';'HYXNt';'dIMP_t';'INSt';'ADNt';...
     'GUAt';'DADNt4';'DGSNt';'DINt';'GSNt';'PAPt';'XANt'},0,'u');
 opt = optimizeCbModel(pur);
-if (opt.f > (lethal))
+if (round(opt.f,5) > (lethal))
     warning('FAILS 3c: Model grows in in vitro conditions with adenine as the sole purine')
 end
+%FAILS
 % pur1 = changeRxnBounds(pur,'ADEt',0,'b');
 % opt_no_hypo = optimizeCbModel(pur1);
 % if ~(opt_no_hypo.f == (lethal))
@@ -115,7 +116,7 @@ end
 pur = changeRxnBounds(model,{'MTAADA';'HYXNt';'ADEt';'dIMP_t';'INSt';'ADNt';...
     'DADNt4';'DGSNt';'DINt';'GSNt';'PAPt';'XANt'},0,'u');
 opt = optimizeCbModel(pur);
-if (opt.f > (lethal))
+if (round(opt.f,5) > (lethal))
     warning('FAILS 3c: Model grows in in vitro conditions with guanine as the sole purine')
 end
 % FAILS
@@ -130,7 +131,7 @@ end
 pur = changeRxnBounds(model,{'MTAADA';'HYXNt';'ADEt';'dIMP_t';'ADNt';...
     'GUAt';'DADNt4';'DGSNt';'DINt';'GSNt';'PAPt';'XANt'},0,'u');
 opt = optimizeCbModel(pur);
-if (opt.f > (lethal))
+if (round(opt.f,5) > (lethal))
     warning('FAILS 3c: Model grows in in vitro conditions with Inosine as the sole purine')
 end
 % pur1 = changeRxnBounds(pur,'INSt',0,'b');
@@ -144,7 +145,7 @@ end
 pur = changeRxnBounds(model,{'MTAADA';'HYXNt';'ADEt';'dIMP_t';'INSt';...
     'GUAt';'DADNt4';'DGSNt';'DINt';'GSNt';'PAPt';'XANt'},0,'u');
 opt = optimizeCbModel(pur);
-if (opt.f > (lethal))
+if (round(opt.f,5) > (lethal))
     warning('FAILS 3c: Model grows in in vitro conditions with Adenosine as the sole purine')
 end
 % pur1 = changeRxnBounds(pur,'ADNt',0,'b');
@@ -158,7 +159,7 @@ end
 pur = changeRxnBounds(model,{'MTAADA';'HYXNt';'ADEt';'dIMP_t';'INSt';...
     'GUAt';'DADNt4';'DGSNt';'DINt';'ADNt';'PAPt';'XANt'},0,'u');
 opt = optimizeCbModel(pur);
-if (opt.f > (lethal))
+if (round(opt.f,5) > (lethal))
     warning('FAILS 3c: Model grows in in vitro conditions with Guanosine as the sole purine')
 end
 % % FAILS
@@ -191,7 +192,7 @@ end
 %man6p, man) glucose (g1p, g6p, glc_D, udpg)  
 test = changeRxnBounds(model,'GLCt1r',0,'u');
 opt = optimizeCbModel(test);
-if ~(opt.f == (lethal))
+if ~(round(opt.f,5) == (lethal))
     warning('FAILS 5b: Alternative sugars can replace glucose as sole sugar source (incorrectly)')
 end
 % FAILS, many reversible reactions that can produce downstream mets
@@ -199,14 +200,14 @@ end
 % Can model grow without isoleucine in media?
 ile = changeRxnBounds(model,'ILEt2r',0,'u');
 opt = optimizeCbModel(ile);
-if ~(opt.f == (lethal))
+if ~(round(opt.f,5) == (lethal))
     warning('FAILS: Model grows without isoleucine')
 end
 % Passes
 
 % Can model growth without p-aminobenzoic acid?
 opt = optimizeCbModel(removeRxns(model,'DHPS2'));
-if ~(opt.f == (lethal))
+if (round(opt.f,5) > (lethal))
     warning('FAILS: Model grows without p-aminobenzoic acid')
 end
 % PASSES
@@ -214,10 +215,10 @@ end
 % Is growth reduced without tyrosine supplementation?
 tyr = changeRxnBounds(model,'TYRt2r',0,'u');
 opt = optimizeCbModel(tyr);
-if ~(opt.f > (frac))
+if ~(round(opt.f,5) > (frac))
     warning('tyrosine required for growth')
 end
-if ~(opt.f < frac)
+if ~(round(opt.f,5) < frac)
     warning('FAILS: Growth is not reduced without tyrosine')
 end
 % fails
@@ -225,10 +226,10 @@ end
 % Is growth reduced without methionine supplementation?
 met = changeRxnBounds(model,{'METt2r';'METLEUex'},0,'u');
 opt = optimizeCbModel(met);
-if ~(opt.f > frac)
+if ~(round(opt.f,5) > frac)
     warning('methionine required for growth')
 end
-if ~(opt.f < frac)
+if ~(round(opt.f,5) < frac)
     warning('FAILS: Growth is not reduced without methionine')
 end
 % fails
@@ -236,10 +237,10 @@ end
 % Is growth reduced without proline supplementation?
 pro = changeRxnBounds(model,'PROt2r',0,'u');
 opt = optimizeCbModel(pro);
-if ~(opt.f > frac)
+if ~(round(opt.f,5) > frac)
     warning('Proline required for growth')
 end
-if ~(opt.f < frac)
+if ~(round(opt.f,5) < frac)
     warning('FAILS: Growth is not reduced without proline')
 end
 % fails
@@ -247,10 +248,10 @@ end
 % Is growth reduced without glutamate supplementation?
 glutamate = changeRxnBounds(model,'GLUt2r',0,'u');
 opt = optimizeCbModel(glutamate);
-if ~(opt.f > frac)
+if ~(round(opt.f,5) > frac)
     warning('glutamate required for growth')
 end
-if ~(opt.f < frac)
+if ~(round(opt.f,5) < frac)
     warning('FAILS: Growth is not reduced without glutamate')
 end
 % fails
@@ -259,10 +260,10 @@ end
 glutamine = changeRxnBounds(model,'GLNt2r',0,'u');
 glutamine = changeRxnBounds(model,{'THRGLNexR';'SERGLNexR';'ALAGLNexR';'CYSGLUexR'},0,'l');
 opt = optimizeCbModel(glutamine);
-if ~(opt.f > frac)
+if ~(round(opt.f,5) > frac)
     warning('glutamine required for growth')
 end
-if ~(opt.f < frac)
+if ~(round(opt.f,5) < frac)
     warning('FAILS: Growth is not reduced without glutamine')
 end
 % fails
@@ -279,18 +280,17 @@ vec = model_mod.mets;
 model_mod = changeRxnBounds(model_mod,{'trdrd_exp','EX_hb','fldox_exp',...
     'acp_exp','EX_pyr(e)'},0,'u');
 for i = 1:length(model_mod.mets)
-    %disp(i)
     met_test = model_mod.mets(i);
     [model2, newRxn] = addDemandReaction( model_mod,met_test);
     if sum(strcmp(newRxn,model2.rxns)) == 0
         vec{i} = 0; % BUT CHECK IN NEXT STEP
     else model2 = changeObjective(model2,newRxn);
         opt = optimizeCbModel(model2);
-        if opt.f <= 0.00001 
+        if round(opt.f,5) <= 0.00001 
             vec{i} = 0;
         else
             warning('Non-zero')
-            disp(opt.f)
+            disp(round(opt.f,5))
             m=vec{i};
             vec{i} = 1;
             t = table(model2.rxns(abs(opt.x)>0), printRxnFormula(model2,model2.rxns(abs(opt.x)>0)),opt.x(abs(opt.x)>0));
@@ -304,7 +304,7 @@ vec2 = ex_rx;
 for i = 1:length(ex_rx)
     model2 = changeObjective(model_mod,ex_rx(i));
     opt = optimizeCbModel(model2);
-    if opt.f <= 0 
+    if round(opt.f,5) <= 0 
         vec2{i} = 0;
     else vec2{i} = 1;
     end
