@@ -6,7 +6,7 @@ Additionally, there is a Python 3.5 virtual environment setup.
 
 Usage of ``` curation_script.py ```: 
 
-```python curation_script_cmd.py -m data/model_changed_names.xml -d data/delete_reactions.csv -e data/add_reactions.csv -a data/edit_biomass.csv```
+```python curation_script.py -m data/model_changed_names.xml -d data/delete_reactions.csv -a data/added_metabolites.csv -e data/add_reactions.csv data/edit_biomass.csv```
 
 ### Auxiliary scripts
 
