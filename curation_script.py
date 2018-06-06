@@ -5,7 +5,7 @@ import csv
 import time
 import os
 import argparse
-#test
+
 __author__ = "Michal Stolarczyk"
 __email__ = "mjs5kd@virginia.edu"
 __version__ = "0.9.0"
@@ -101,7 +101,6 @@ for filename in args.edit:
         model.reactions.get_by_id(file[i][0]).reversibility = to_bool(file[i][7])
         model.reactions.get_by_id(file[i][0]).subsystem = file[i][6]
         model.reactions.get_by_id(file[i][0]).gene_reaction_rule = file[i][3]
-        model.reactions.get_by_id(file[i][0]).annotation = file[i][14]
     del file, handle, filename
 
 # iterate over the file with the reactions to be deleted
@@ -125,6 +124,7 @@ timestr = time.strftime("%Y_%m_%d_%H:%M:%S")
 filename = fixpath(dir_path + "/output/curated_model_" + timestr)
 
 # save the curated model
+
 cobra.io.write_sbml_model(model, filename + ".xml")
 
 # run if the file with added metabolites was provided
