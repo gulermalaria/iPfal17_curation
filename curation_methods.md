@@ -26,6 +26,8 @@ In fact, the number of distinct reactions added is close to number of added gene
 
 ![Curation results](/curation_barplot.png)
 
+The curated reconstruction was tested in the [essentiality screen](https://github.com/gulermalaria/essentiality_screen)
+
 ### References
 1. Gulati, S. et al. Profiling the Essential Nature of Lipid Metabolism in Asexual Blood and Gametocyte Stages of Plasmodium falciparum. Cell Host Microbe 18, 371–381 (2015)
 2. Ginsburg, H. Progress in in silico functional genomics: the malaria Metabolic Pathways database. Trends in Parasitology 22, 238–240 (2006).
